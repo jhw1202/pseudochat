@@ -1,8 +1,11 @@
-class SessionController < ApplicationController
+class SessionsController < ApplicationController
 	before_filter :user_signed_in?, :only => [:delete]
 
+  def new
+  end
+
   def create
-    if user = User.find_by_email(params[:user][:email]).try(:authenticate, params[:user][:password])
+    if user = User.find_by_email(params[:email]).try(:authenticate, params[:password])
       session[:user_id] = user.id
       redirect_to root_path
     else
@@ -10,8 +13,9 @@ class SessionController < ApplicationController
     end
   end
 
-  def delete
-    session.delete(:user_id)
+  def destroy
+    session.clear
+    redirect_to root_path
   end
 
 end
