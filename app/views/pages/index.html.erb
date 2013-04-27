@@ -1,0 +1,8 @@
+
+<% if current_user %>
+Welcome, <%= @user.name %>
+<%= link_to "Signout", signout_path %>
+<% else %>
+<%= link_to "Signin", signin_path %>
+<%= link_to "Signup", signup_path %>
+<% end %>
