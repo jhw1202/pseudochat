@@ -37,3 +37,14 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+group :development, :test do
+  gem 'nyan-cat-formatter'
+  gem 'shoulda'
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'faker'
+  gem 'factory_girl'
+end
