@@ -6,7 +6,7 @@ gem 'rails', '3.2.12'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-
+gem 'bcrypt-ruby'
 
 
 # Gems used only for assets and not required
@@ -39,12 +39,12 @@ gem 'jquery-rails'
 # gem 'debugger'
 group :development, :test do
   gem 'nyan-cat-formatter'
-  gem 'shoulda'
+  gem 'shoulda-matchers'
   gem 'rspec'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'faker'
-  gem 'factory_girl'
+  gem 'factory_girl_rails'
 end
