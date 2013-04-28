@@ -1,0 +1,18 @@
+<div class="nav">
+<div class="logo">
+PsuedoChat
+</div>
+<div class="menu">
+	<table>
+		<% if current_user %>
+			<td>
+			<%= @user.name %>
+			<%= link_to "Signout", signout_path %>
+			</td>
+		<% else %>
+			<td><%= link_to "Signin", signin_path %></td>
+			<td><%= link_to "Signup", signup_path %></td>
+		<% end %>
+	</table>
+</div>
+</div>

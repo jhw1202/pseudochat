@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :messages
+  has_many :chats, :through => :messages
   attr_accessible :email, :name, :password
 
   has_secure_password
